@@ -19,7 +19,7 @@ import javax.inject.Singleton
 @InstallIn(ApplicationComponent::class)
 object AppModule {
 
-    private const val Key: String = "P@ssw0rdfff"
+    private const val Key: String = "P@ssw0rd"
 
 
     @NotEncryptedDao
