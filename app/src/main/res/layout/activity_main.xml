@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Secure Room Database"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/noEncryptBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Encryption" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/encryptBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Encryption" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/encryptMemoryBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Encryption with Memory Secure" />
+
+        </RadioGroup>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/insertOneRecordBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Insert One Records"
+            app:layout_constraintEnd_toEndOf="@+id/selectBtn"
+            app:layout_constraintStart_toStartOf="@+id/selectBtn"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/insertBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Insert 100000 Record"
+            app:layout_constraintEnd_toEndOf="@+id/selectBtn"
+            app:layout_constraintStart_toStartOf="@+id/selectBtn"
+            app:layout_constraintTop_toBottomOf="@+id/insertOneRecordBtn" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/selectBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Select 100000 Records"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insertBtn" />
+
+
+        <TextView
+            android:id="@+id/insertTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="60dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selectBtn" />
+
+
+        <TextView
+            android:id="@+id/selectTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insertTimeTv" />
+
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.Material.ProgressBar.Small"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="80dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/design_default_color_primary"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
